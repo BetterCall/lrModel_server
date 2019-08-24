@@ -380,6 +380,8 @@ export type UserOrderByInput =
   | "lastName_DESC"
   | "bio_ASC"
   | "bio_DESC"
+  | "secret_ASC"
+  | "secret_DESC"
   | "createdAt_ASC"
   | "createdAt_DESC"
   | "updatedAt_ASC"
@@ -743,6 +745,7 @@ export interface UserUpdateInput {
   firstName?: Maybe<String>;
   lastName?: Maybe<String>;
   bio?: Maybe<String>;
+  secret?: Maybe<String>;
   posts?: Maybe<PostUpdateManyWithoutUserInput>;
   likes?: Maybe<LikeUpdateManyWithoutUserInput>;
   comments?: Maybe<CommentUpdateManyWithoutUserInput>;
@@ -824,6 +827,7 @@ export interface UserUpdateWithoutLikesDataInput {
   firstName?: Maybe<String>;
   lastName?: Maybe<String>;
   bio?: Maybe<String>;
+  secret?: Maybe<String>;
   posts?: Maybe<PostUpdateManyWithoutUserInput>;
   comments?: Maybe<CommentUpdateManyWithoutUserInput>;
   following?: Maybe<UserUpdateManyWithoutFollowersInput>;
@@ -939,6 +943,7 @@ export interface UserUpdateWithoutPostsDataInput {
   firstName?: Maybe<String>;
   lastName?: Maybe<String>;
   bio?: Maybe<String>;
+  secret?: Maybe<String>;
   likes?: Maybe<LikeUpdateManyWithoutUserInput>;
   comments?: Maybe<CommentUpdateManyWithoutUserInput>;
   following?: Maybe<UserUpdateManyWithoutFollowersInput>;
@@ -1089,6 +1094,20 @@ export interface UserWhereInput {
   bio_not_starts_with?: Maybe<String>;
   bio_ends_with?: Maybe<String>;
   bio_not_ends_with?: Maybe<String>;
+  secret?: Maybe<String>;
+  secret_not?: Maybe<String>;
+  secret_in?: Maybe<String[] | String>;
+  secret_not_in?: Maybe<String[] | String>;
+  secret_lt?: Maybe<String>;
+  secret_lte?: Maybe<String>;
+  secret_gt?: Maybe<String>;
+  secret_gte?: Maybe<String>;
+  secret_contains?: Maybe<String>;
+  secret_not_contains?: Maybe<String>;
+  secret_starts_with?: Maybe<String>;
+  secret_not_starts_with?: Maybe<String>;
+  secret_ends_with?: Maybe<String>;
+  secret_not_ends_with?: Maybe<String>;
   posts_every?: Maybe<PostWhereInput>;
   posts_some?: Maybe<PostWhereInput>;
   posts_none?: Maybe<PostWhereInput>;
@@ -1407,6 +1426,7 @@ export interface UserUpdateWithoutFollowersDataInput {
   firstName?: Maybe<String>;
   lastName?: Maybe<String>;
   bio?: Maybe<String>;
+  secret?: Maybe<String>;
   posts?: Maybe<PostUpdateManyWithoutUserInput>;
   likes?: Maybe<LikeUpdateManyWithoutUserInput>;
   comments?: Maybe<CommentUpdateManyWithoutUserInput>;
@@ -1420,6 +1440,7 @@ export interface UserUpdateWithoutCommentsDataInput {
   firstName?: Maybe<String>;
   lastName?: Maybe<String>;
   bio?: Maybe<String>;
+  secret?: Maybe<String>;
   posts?: Maybe<PostUpdateManyWithoutUserInput>;
   likes?: Maybe<LikeUpdateManyWithoutUserInput>;
   following?: Maybe<UserUpdateManyWithoutFollowersInput>;
@@ -1626,6 +1647,7 @@ export interface UserUpdateDataInput {
   firstName?: Maybe<String>;
   lastName?: Maybe<String>;
   bio?: Maybe<String>;
+  secret?: Maybe<String>;
   posts?: Maybe<PostUpdateManyWithoutUserInput>;
   likes?: Maybe<LikeUpdateManyWithoutUserInput>;
   comments?: Maybe<CommentUpdateManyWithoutUserInput>;
@@ -1687,6 +1709,7 @@ export interface UserUpdateWithoutFollowingDataInput {
   firstName?: Maybe<String>;
   lastName?: Maybe<String>;
   bio?: Maybe<String>;
+  secret?: Maybe<String>;
   posts?: Maybe<PostUpdateManyWithoutUserInput>;
   likes?: Maybe<LikeUpdateManyWithoutUserInput>;
   comments?: Maybe<CommentUpdateManyWithoutUserInput>;
@@ -1801,6 +1824,20 @@ export interface UserScalarWhereInput {
   bio_not_starts_with?: Maybe<String>;
   bio_ends_with?: Maybe<String>;
   bio_not_ends_with?: Maybe<String>;
+  secret?: Maybe<String>;
+  secret_not?: Maybe<String>;
+  secret_in?: Maybe<String[] | String>;
+  secret_not_in?: Maybe<String[] | String>;
+  secret_lt?: Maybe<String>;
+  secret_lte?: Maybe<String>;
+  secret_gt?: Maybe<String>;
+  secret_gte?: Maybe<String>;
+  secret_contains?: Maybe<String>;
+  secret_not_contains?: Maybe<String>;
+  secret_starts_with?: Maybe<String>;
+  secret_not_starts_with?: Maybe<String>;
+  secret_ends_with?: Maybe<String>;
+  secret_not_ends_with?: Maybe<String>;
   createdAt?: Maybe<DateTimeInput>;
   createdAt_not?: Maybe<DateTimeInput>;
   createdAt_in?: Maybe<DateTimeInput[] | DateTimeInput>;
@@ -1844,6 +1881,7 @@ export interface UserUpdateManyDataInput {
   firstName?: Maybe<String>;
   lastName?: Maybe<String>;
   bio?: Maybe<String>;
+  secret?: Maybe<String>;
 }
 
 export interface UserCreateWithoutPostsInput {
@@ -1853,6 +1891,7 @@ export interface UserCreateWithoutPostsInput {
   firstName?: Maybe<String>;
   lastName?: Maybe<String>;
   bio?: Maybe<String>;
+  secret?: Maybe<String>;
   likes?: Maybe<LikeCreateManyWithoutUserInput>;
   comments?: Maybe<CommentCreateManyWithoutUserInput>;
   following?: Maybe<UserCreateManyWithoutFollowersInput>;
@@ -1887,6 +1926,7 @@ export interface UserCreateWithoutFollowersInput {
   firstName?: Maybe<String>;
   lastName?: Maybe<String>;
   bio?: Maybe<String>;
+  secret?: Maybe<String>;
   posts?: Maybe<PostCreateManyWithoutUserInput>;
   likes?: Maybe<LikeCreateManyWithoutUserInput>;
   comments?: Maybe<CommentCreateManyWithoutUserInput>;
@@ -1947,6 +1987,7 @@ export interface UserCreateWithoutFollowingInput {
   firstName?: Maybe<String>;
   lastName?: Maybe<String>;
   bio?: Maybe<String>;
+  secret?: Maybe<String>;
   posts?: Maybe<PostCreateManyWithoutUserInput>;
   likes?: Maybe<LikeCreateManyWithoutUserInput>;
   comments?: Maybe<CommentCreateManyWithoutUserInput>;
@@ -2032,6 +2073,7 @@ export interface UserUpdateWithoutRoomsDataInput {
   firstName?: Maybe<String>;
   lastName?: Maybe<String>;
   bio?: Maybe<String>;
+  secret?: Maybe<String>;
   posts?: Maybe<PostUpdateManyWithoutUserInput>;
   likes?: Maybe<LikeUpdateManyWithoutUserInput>;
   comments?: Maybe<CommentUpdateManyWithoutUserInput>;
@@ -2051,6 +2093,7 @@ export interface UserCreateWithoutRoomsInput {
   firstName?: Maybe<String>;
   lastName?: Maybe<String>;
   bio?: Maybe<String>;
+  secret?: Maybe<String>;
   posts?: Maybe<PostCreateManyWithoutUserInput>;
   likes?: Maybe<LikeCreateManyWithoutUserInput>;
   comments?: Maybe<CommentCreateManyWithoutUserInput>;
@@ -2119,6 +2162,7 @@ export interface UserCreateInput {
   firstName?: Maybe<String>;
   lastName?: Maybe<String>;
   bio?: Maybe<String>;
+  secret?: Maybe<String>;
   posts?: Maybe<PostCreateManyWithoutUserInput>;
   likes?: Maybe<LikeCreateManyWithoutUserInput>;
   comments?: Maybe<CommentCreateManyWithoutUserInput>;
@@ -2233,6 +2277,7 @@ export interface UserCreateWithoutLikesInput {
   firstName?: Maybe<String>;
   lastName?: Maybe<String>;
   bio?: Maybe<String>;
+  secret?: Maybe<String>;
   posts?: Maybe<PostCreateManyWithoutUserInput>;
   comments?: Maybe<CommentCreateManyWithoutUserInput>;
   following?: Maybe<UserCreateManyWithoutFollowersInput>;
@@ -2263,6 +2308,7 @@ export interface UserUpdateManyMutationInput {
   firstName?: Maybe<String>;
   lastName?: Maybe<String>;
   bio?: Maybe<String>;
+  secret?: Maybe<String>;
 }
 
 export interface PostCreateWithoutFilesInput {
@@ -2315,6 +2361,7 @@ export interface UserCreateWithoutCommentsInput {
   firstName?: Maybe<String>;
   lastName?: Maybe<String>;
   bio?: Maybe<String>;
+  secret?: Maybe<String>;
   posts?: Maybe<PostCreateManyWithoutUserInput>;
   likes?: Maybe<LikeCreateManyWithoutUserInput>;
   following?: Maybe<UserCreateManyWithoutFollowersInput>;
@@ -2333,6 +2380,7 @@ export interface UserPreviousValues {
   firstName?: String;
   lastName?: String;
   bio?: String;
+  secret?: String;
   createdAt: DateTimeOutput;
   updatedAt: DateTimeOutput;
 }
@@ -2346,6 +2394,7 @@ export interface UserPreviousValuesPromise
   firstName: () => Promise<String>;
   lastName: () => Promise<String>;
   bio: () => Promise<String>;
+  secret: () => Promise<String>;
   createdAt: () => Promise<DateTimeOutput>;
   updatedAt: () => Promise<DateTimeOutput>;
 }
@@ -2359,6 +2408,7 @@ export interface UserPreviousValuesSubscription
   firstName: () => Promise<AsyncIterator<String>>;
   lastName: () => Promise<AsyncIterator<String>>;
   bio: () => Promise<AsyncIterator<String>>;
+  secret: () => Promise<AsyncIterator<String>>;
   createdAt: () => Promise<AsyncIterator<DateTimeOutput>>;
   updatedAt: () => Promise<AsyncIterator<DateTimeOutput>>;
 }
@@ -3143,6 +3193,7 @@ export interface User {
   firstName?: String;
   lastName?: String;
   bio?: String;
+  secret?: String;
   createdAt: DateTimeOutput;
   updatedAt: DateTimeOutput;
 }
@@ -3154,6 +3205,7 @@ export interface UserPromise extends Promise<User>, Fragmentable {
   firstName: () => Promise<String>;
   lastName: () => Promise<String>;
   bio: () => Promise<String>;
+  secret: () => Promise<String>;
   posts: <T = FragmentableArray<Post>>(args?: {
     where?: PostWhereInput;
     orderBy?: PostOrderByInput;
@@ -3221,6 +3273,7 @@ export interface UserSubscription
   firstName: () => Promise<AsyncIterator<String>>;
   lastName: () => Promise<AsyncIterator<String>>;
   bio: () => Promise<AsyncIterator<String>>;
+  secret: () => Promise<AsyncIterator<String>>;
   posts: <T = Promise<AsyncIterator<PostSubscription>>>(args?: {
     where?: PostWhereInput;
     orderBy?: PostOrderByInput;
@@ -3288,6 +3341,7 @@ export interface UserNullablePromise
   firstName: () => Promise<String>;
   lastName: () => Promise<String>;
   bio: () => Promise<String>;
+  secret: () => Promise<String>;
   posts: <T = FragmentableArray<Post>>(args?: {
     where?: PostWhereInput;
     orderBy?: PostOrderByInput;

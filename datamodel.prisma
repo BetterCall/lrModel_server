@@ -6,6 +6,8 @@ type User {
   lastName: String
   bio: String
 
+  secret: String
+
   posts: [Post!]!
   likes: [Like!]!
   comments: [Comment!]!
