@@ -1,0 +1,18 @@
+{
+  "name": "lrModel_server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/BetterCall/lrModel_server.git",
+  "author": "Bryann <bryann@brovia.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "graphql-yoga": "^1.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  },
+  "scripts": {
+    "dev": "nodemon --exec babel-node src/server.js"
+  }
+}
