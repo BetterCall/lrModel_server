@@ -1850,8 +1850,8 @@ export interface UserCreateWithoutPostsInput {
   id?: Maybe<ID_Input>;
   username?: Maybe<String>;
   email?: Maybe<String>;
-  firstName: String;
-  lastName: String;
+  firstName?: Maybe<String>;
+  lastName?: Maybe<String>;
   bio?: Maybe<String>;
   likes?: Maybe<LikeCreateManyWithoutUserInput>;
   comments?: Maybe<CommentCreateManyWithoutUserInput>;
@@ -1884,8 +1884,8 @@ export interface UserCreateWithoutFollowersInput {
   id?: Maybe<ID_Input>;
   username?: Maybe<String>;
   email?: Maybe<String>;
-  firstName: String;
-  lastName: String;
+  firstName?: Maybe<String>;
+  lastName?: Maybe<String>;
   bio?: Maybe<String>;
   posts?: Maybe<PostCreateManyWithoutUserInput>;
   likes?: Maybe<LikeCreateManyWithoutUserInput>;
@@ -1944,8 +1944,8 @@ export interface UserCreateWithoutFollowingInput {
   id?: Maybe<ID_Input>;
   username?: Maybe<String>;
   email?: Maybe<String>;
-  firstName: String;
-  lastName: String;
+  firstName?: Maybe<String>;
+  lastName?: Maybe<String>;
   bio?: Maybe<String>;
   posts?: Maybe<PostCreateManyWithoutUserInput>;
   likes?: Maybe<LikeCreateManyWithoutUserInput>;
@@ -2048,8 +2048,8 @@ export interface UserCreateWithoutRoomsInput {
   id?: Maybe<ID_Input>;
   username?: Maybe<String>;
   email?: Maybe<String>;
-  firstName: String;
-  lastName: String;
+  firstName?: Maybe<String>;
+  lastName?: Maybe<String>;
   bio?: Maybe<String>;
   posts?: Maybe<PostCreateManyWithoutUserInput>;
   likes?: Maybe<LikeCreateManyWithoutUserInput>;
@@ -2116,8 +2116,8 @@ export interface UserCreateInput {
   id?: Maybe<ID_Input>;
   username?: Maybe<String>;
   email?: Maybe<String>;
-  firstName: String;
-  lastName: String;
+  firstName?: Maybe<String>;
+  lastName?: Maybe<String>;
   bio?: Maybe<String>;
   posts?: Maybe<PostCreateManyWithoutUserInput>;
   likes?: Maybe<LikeCreateManyWithoutUserInput>;
@@ -2230,8 +2230,8 @@ export interface UserCreateWithoutLikesInput {
   id?: Maybe<ID_Input>;
   username?: Maybe<String>;
   email?: Maybe<String>;
-  firstName: String;
-  lastName: String;
+  firstName?: Maybe<String>;
+  lastName?: Maybe<String>;
   bio?: Maybe<String>;
   posts?: Maybe<PostCreateManyWithoutUserInput>;
   comments?: Maybe<CommentCreateManyWithoutUserInput>;
@@ -2312,8 +2312,8 @@ export interface UserCreateWithoutCommentsInput {
   id?: Maybe<ID_Input>;
   username?: Maybe<String>;
   email?: Maybe<String>;
-  firstName: String;
-  lastName: String;
+  firstName?: Maybe<String>;
+  lastName?: Maybe<String>;
   bio?: Maybe<String>;
   posts?: Maybe<PostCreateManyWithoutUserInput>;
   likes?: Maybe<LikeCreateManyWithoutUserInput>;
@@ -2330,8 +2330,8 @@ export interface UserPreviousValues {
   id: ID_Output;
   username?: String;
   email?: String;
-  firstName: String;
-  lastName: String;
+  firstName?: String;
+  lastName?: String;
   bio?: String;
   createdAt: DateTimeOutput;
   updatedAt: DateTimeOutput;
@@ -3140,8 +3140,8 @@ export interface User {
   id: ID_Output;
   username?: String;
   email?: String;
-  firstName: String;
-  lastName: String;
+  firstName?: String;
+  lastName?: String;
   bio?: String;
   createdAt: DateTimeOutput;
   updatedAt: DateTimeOutput;

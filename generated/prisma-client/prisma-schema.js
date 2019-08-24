@@ -1583,8 +1583,8 @@ type User {
   id: ID!
   username: String
   email: String
-  firstName: String!
-  lastName: String!
+  firstName: String
+  lastName: String
   bio: String
   posts(where: PostWhereInput, orderBy: PostOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Post!]
   likes(where: LikeWhereInput, orderBy: LikeOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Like!]
@@ -1606,8 +1606,8 @@ input UserCreateInput {
   id: ID
   username: String
   email: String
-  firstName: String!
-  lastName: String!
+  firstName: String
+  lastName: String
   bio: String
   posts: PostCreateManyWithoutUserInput
   likes: LikeCreateManyWithoutUserInput
@@ -1656,8 +1656,8 @@ input UserCreateWithoutCommentsInput {
   id: ID
   username: String
   email: String
-  firstName: String!
-  lastName: String!
+  firstName: String
+  lastName: String
   bio: String
   posts: PostCreateManyWithoutUserInput
   likes: LikeCreateManyWithoutUserInput
@@ -1670,8 +1670,8 @@ input UserCreateWithoutFollowersInput {
   id: ID
   username: String
   email: String
-  firstName: String!
-  lastName: String!
+  firstName: String
+  lastName: String
   bio: String
   posts: PostCreateManyWithoutUserInput
   likes: LikeCreateManyWithoutUserInput
@@ -1684,8 +1684,8 @@ input UserCreateWithoutFollowingInput {
   id: ID
   username: String
   email: String
-  firstName: String!
-  lastName: String!
+  firstName: String
+  lastName: String
   bio: String
   posts: PostCreateManyWithoutUserInput
   likes: LikeCreateManyWithoutUserInput
@@ -1698,8 +1698,8 @@ input UserCreateWithoutLikesInput {
   id: ID
   username: String
   email: String
-  firstName: String!
-  lastName: String!
+  firstName: String
+  lastName: String
   bio: String
   posts: PostCreateManyWithoutUserInput
   comments: CommentCreateManyWithoutUserInput
@@ -1712,8 +1712,8 @@ input UserCreateWithoutPostsInput {
   id: ID
   username: String
   email: String
-  firstName: String!
-  lastName: String!
+  firstName: String
+  lastName: String
   bio: String
   likes: LikeCreateManyWithoutUserInput
   comments: CommentCreateManyWithoutUserInput
@@ -1726,8 +1726,8 @@ input UserCreateWithoutRoomsInput {
   id: ID
   username: String
   email: String
-  firstName: String!
-  lastName: String!
+  firstName: String
+  lastName: String
   bio: String
   posts: PostCreateManyWithoutUserInput
   likes: LikeCreateManyWithoutUserInput
@@ -1764,8 +1764,8 @@ type UserPreviousValues {
   id: ID!
   username: String
   email: String
-  firstName: String!
-  lastName: String!
+  firstName: String
+  lastName: String
   bio: String
   createdAt: DateTime!
   updatedAt: DateTime!
