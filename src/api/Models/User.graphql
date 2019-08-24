@@ -1,0 +1,20 @@
+type User {
+  id: ID!
+  username: String
+  email: String
+  firstName: String!
+  lastName: String!
+  bio: String
+
+  posts: [Post!]!
+  likes: [Like!]!
+  comments: [Comment!]!
+
+  following: [User!]!
+  followers: [User!]!
+
+  rooms: [Room!]!
+
+  createdAt: String!
+  updatedAt: String!
+}

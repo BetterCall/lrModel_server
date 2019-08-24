@@ -1,0 +1,9 @@
+type File {
+  id: ID!
+
+  url: String!
+  post: Post!
+
+  createdAt: String!
+  updatedAt: String!
+}
