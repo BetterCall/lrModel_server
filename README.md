@@ -9,11 +9,13 @@ Lr app server with prisma and express
 - [x] Confirm Secret
 - [x] Like / Unlike Photo
 - [x] Comment on a photo
+- [x] Search user by location / firstName / LastName
+- [x] Search Post by location / caption
 
-- [ ] Search by user
-- [ ] Search by location
+- [ ] Follow
+- [ ] Unfollow user
+
 - [ ] See User Profile
-- [ ] Follow / Unfollow user
 - [ ] See the full photo
 - [ ] Edit my Profile
 - [ ] Upload Photos
