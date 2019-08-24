@@ -5,12 +5,11 @@ Lr app server with prisma and express
 ## User Stories
 
 - [x] Create Account
-- [ ] Request Secret
+- [x] Request Secret
+- [x] Confirm Secret
+- [x] Like / Unlike Photo
+- [x] Comment on a photo
 
-- [ ] Login
-- [ ] See the feed
-- [ ] Like / Unlike Photo
-- [ ] Comment on a photo
 - [ ] Search by user
 - [ ] Search by location
 - [ ] See User Profile
@@ -19,3 +18,4 @@ Lr app server with prisma and express
 - [ ] Edit my Profile
 - [ ] Upload Photos
 - [ ] Edit the photo (Delete)
+- [ ] See the feed
