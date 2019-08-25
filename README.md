@@ -16,8 +16,8 @@ Lr app server with prisma and express
 - [x] Unfollow user
 - [x] Edit my Profile
 - [x] See User Profile
+- [x] See the full photo
 
-- [ ] See the full photo
 - [ ] Upload Photos
 - [ ] Edit the photo (Delete)
 - [ ] See the feed

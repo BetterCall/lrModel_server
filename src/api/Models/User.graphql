@@ -5,7 +5,6 @@ type User {
   firstName: String
   lastName: String
   bio: String
-
   fullName: String
 
   secret: String
