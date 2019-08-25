@@ -1589,6 +1589,7 @@ type User {
   id: ID!
   username: String
   email: String
+  password: String
   firstName: String
   lastName: String
   bio: String
@@ -1613,6 +1614,7 @@ input UserCreateInput {
   id: ID
   username: String
   email: String
+  password: String
   firstName: String
   lastName: String
   bio: String
@@ -1664,6 +1666,7 @@ input UserCreateWithoutCommentsInput {
   id: ID
   username: String
   email: String
+  password: String
   firstName: String
   lastName: String
   bio: String
@@ -1679,6 +1682,7 @@ input UserCreateWithoutFollowersInput {
   id: ID
   username: String
   email: String
+  password: String
   firstName: String
   lastName: String
   bio: String
@@ -1694,6 +1698,7 @@ input UserCreateWithoutFollowingInput {
   id: ID
   username: String
   email: String
+  password: String
   firstName: String
   lastName: String
   bio: String
@@ -1709,6 +1714,7 @@ input UserCreateWithoutLikesInput {
   id: ID
   username: String
   email: String
+  password: String
   firstName: String
   lastName: String
   bio: String
@@ -1724,6 +1730,7 @@ input UserCreateWithoutPostsInput {
   id: ID
   username: String
   email: String
+  password: String
   firstName: String
   lastName: String
   bio: String
@@ -1739,6 +1746,7 @@ input UserCreateWithoutRoomsInput {
   id: ID
   username: String
   email: String
+  password: String
   firstName: String
   lastName: String
   bio: String
@@ -1762,6 +1770,8 @@ enum UserOrderByInput {
   username_DESC
   email_ASC
   email_DESC
+  password_ASC
+  password_DESC
   firstName_ASC
   firstName_DESC
   lastName_ASC
@@ -1780,6 +1790,7 @@ type UserPreviousValues {
   id: ID!
   username: String
   email: String
+  password: String
   firstName: String
   lastName: String
   bio: String
@@ -1831,6 +1842,20 @@ input UserScalarWhereInput {
   email_not_starts_with: String
   email_ends_with: String
   email_not_ends_with: String
+  password: String
+  password_not: String
+  password_in: [String!]
+  password_not_in: [String!]
+  password_lt: String
+  password_lte: String
+  password_gt: String
+  password_gte: String
+  password_contains: String
+  password_not_contains: String
+  password_starts_with: String
+  password_not_starts_with: String
+  password_ends_with: String
+  password_not_ends_with: String
   firstName: String
   firstName_not: String
   firstName_in: [String!]
@@ -1929,6 +1954,7 @@ input UserSubscriptionWhereInput {
 input UserUpdateDataInput {
   username: String
   email: String
+  password: String
   firstName: String
   lastName: String
   bio: String
@@ -1944,6 +1970,7 @@ input UserUpdateDataInput {
 input UserUpdateInput {
   username: String
   email: String
+  password: String
   firstName: String
   lastName: String
   bio: String
@@ -1959,6 +1986,7 @@ input UserUpdateInput {
 input UserUpdateManyDataInput {
   username: String
   email: String
+  password: String
   firstName: String
   lastName: String
   bio: String
@@ -1968,6 +1996,7 @@ input UserUpdateManyDataInput {
 input UserUpdateManyMutationInput {
   username: String
   email: String
+  password: String
   firstName: String
   lastName: String
   bio: String
@@ -2046,6 +2075,7 @@ input UserUpdateOneRequiredWithoutPostsInput {
 input UserUpdateWithoutCommentsDataInput {
   username: String
   email: String
+  password: String
   firstName: String
   lastName: String
   bio: String
@@ -2060,6 +2090,7 @@ input UserUpdateWithoutCommentsDataInput {
 input UserUpdateWithoutFollowersDataInput {
   username: String
   email: String
+  password: String
   firstName: String
   lastName: String
   bio: String
@@ -2074,6 +2105,7 @@ input UserUpdateWithoutFollowersDataInput {
 input UserUpdateWithoutFollowingDataInput {
   username: String
   email: String
+  password: String
   firstName: String
   lastName: String
   bio: String
@@ -2088,6 +2120,7 @@ input UserUpdateWithoutFollowingDataInput {
 input UserUpdateWithoutLikesDataInput {
   username: String
   email: String
+  password: String
   firstName: String
   lastName: String
   bio: String
@@ -2102,6 +2135,7 @@ input UserUpdateWithoutLikesDataInput {
 input UserUpdateWithoutPostsDataInput {
   username: String
   email: String
+  password: String
   firstName: String
   lastName: String
   bio: String
@@ -2116,6 +2150,7 @@ input UserUpdateWithoutPostsDataInput {
 input UserUpdateWithoutRoomsDataInput {
   username: String
   email: String
+  password: String
   firstName: String
   lastName: String
   bio: String
@@ -2223,6 +2258,20 @@ input UserWhereInput {
   email_not_starts_with: String
   email_ends_with: String
   email_not_ends_with: String
+  password: String
+  password_not: String
+  password_in: [String!]
+  password_not_in: [String!]
+  password_lt: String
+  password_lte: String
+  password_gt: String
+  password_gte: String
+  password_contains: String
+  password_not_contains: String
+  password_starts_with: String
+  password_not_starts_with: String
+  password_ends_with: String
+  password_not_ends_with: String
   firstName: String
   firstName_not: String
   firstName_in: [String!]

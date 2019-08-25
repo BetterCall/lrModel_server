@@ -374,6 +374,8 @@ export type UserOrderByInput =
   | "username_DESC"
   | "email_ASC"
   | "email_DESC"
+  | "password_ASC"
+  | "password_DESC"
   | "firstName_ASC"
   | "firstName_DESC"
   | "lastName_ASC"
@@ -734,6 +736,7 @@ export interface FileUpdateManyWithWhereNestedInput {
 export interface UserUpdateInput {
   username?: Maybe<String>;
   email?: Maybe<String>;
+  password?: Maybe<String>;
   firstName?: Maybe<String>;
   lastName?: Maybe<String>;
   bio?: Maybe<String>;
@@ -816,6 +819,7 @@ export interface UserUpsertWithWhereUniqueWithoutRoomsInput {
 export interface UserUpdateWithoutLikesDataInput {
   username?: Maybe<String>;
   email?: Maybe<String>;
+  password?: Maybe<String>;
   firstName?: Maybe<String>;
   lastName?: Maybe<String>;
   bio?: Maybe<String>;
@@ -932,6 +936,7 @@ export type UserWhereUniqueInput = AtLeastOne<{
 export interface UserUpdateWithoutPostsDataInput {
   username?: Maybe<String>;
   email?: Maybe<String>;
+  password?: Maybe<String>;
   firstName?: Maybe<String>;
   lastName?: Maybe<String>;
   bio?: Maybe<String>;
@@ -1340,6 +1345,7 @@ export interface CommentUpdateInput {
 export interface UserUpdateWithoutFollowersDataInput {
   username?: Maybe<String>;
   email?: Maybe<String>;
+  password?: Maybe<String>;
   firstName?: Maybe<String>;
   lastName?: Maybe<String>;
   bio?: Maybe<String>;
@@ -1354,6 +1360,7 @@ export interface UserUpdateWithoutFollowersDataInput {
 export interface UserUpdateWithoutCommentsDataInput {
   username?: Maybe<String>;
   email?: Maybe<String>;
+  password?: Maybe<String>;
   firstName?: Maybe<String>;
   lastName?: Maybe<String>;
   bio?: Maybe<String>;
@@ -1443,6 +1450,20 @@ export interface UserWhereInput {
   email_not_starts_with?: Maybe<String>;
   email_ends_with?: Maybe<String>;
   email_not_ends_with?: Maybe<String>;
+  password?: Maybe<String>;
+  password_not?: Maybe<String>;
+  password_in?: Maybe<String[] | String>;
+  password_not_in?: Maybe<String[] | String>;
+  password_lt?: Maybe<String>;
+  password_lte?: Maybe<String>;
+  password_gt?: Maybe<String>;
+  password_gte?: Maybe<String>;
+  password_contains?: Maybe<String>;
+  password_not_contains?: Maybe<String>;
+  password_starts_with?: Maybe<String>;
+  password_not_starts_with?: Maybe<String>;
+  password_ends_with?: Maybe<String>;
+  password_not_ends_with?: Maybe<String>;
   firstName?: Maybe<String>;
   firstName_not?: Maybe<String>;
   firstName_in?: Maybe<String[] | String>;
@@ -1621,6 +1642,7 @@ export interface UserUpdateWithWhereUniqueWithoutRoomsInput {
 export interface UserUpdateDataInput {
   username?: Maybe<String>;
   email?: Maybe<String>;
+  password?: Maybe<String>;
   firstName?: Maybe<String>;
   lastName?: Maybe<String>;
   bio?: Maybe<String>;
@@ -1683,6 +1705,7 @@ export interface MessageCreateInput {
 export interface UserUpdateWithoutFollowingDataInput {
   username?: Maybe<String>;
   email?: Maybe<String>;
+  password?: Maybe<String>;
   firstName?: Maybe<String>;
   lastName?: Maybe<String>;
   bio?: Maybe<String>;
@@ -1759,6 +1782,20 @@ export interface UserScalarWhereInput {
   email_not_starts_with?: Maybe<String>;
   email_ends_with?: Maybe<String>;
   email_not_ends_with?: Maybe<String>;
+  password?: Maybe<String>;
+  password_not?: Maybe<String>;
+  password_in?: Maybe<String[] | String>;
+  password_not_in?: Maybe<String[] | String>;
+  password_lt?: Maybe<String>;
+  password_lte?: Maybe<String>;
+  password_gt?: Maybe<String>;
+  password_gte?: Maybe<String>;
+  password_contains?: Maybe<String>;
+  password_not_contains?: Maybe<String>;
+  password_starts_with?: Maybe<String>;
+  password_not_starts_with?: Maybe<String>;
+  password_ends_with?: Maybe<String>;
+  password_not_ends_with?: Maybe<String>;
   firstName?: Maybe<String>;
   firstName_not?: Maybe<String>;
   firstName_in?: Maybe<String[] | String>;
@@ -1855,6 +1892,7 @@ export interface CommentCreateWithoutUserInput {
 export interface UserUpdateManyDataInput {
   username?: Maybe<String>;
   email?: Maybe<String>;
+  password?: Maybe<String>;
   firstName?: Maybe<String>;
   lastName?: Maybe<String>;
   bio?: Maybe<String>;
@@ -1865,6 +1903,7 @@ export interface UserCreateWithoutPostsInput {
   id?: Maybe<ID_Input>;
   username?: Maybe<String>;
   email?: Maybe<String>;
+  password?: Maybe<String>;
   firstName?: Maybe<String>;
   lastName?: Maybe<String>;
   bio?: Maybe<String>;
@@ -1900,6 +1939,7 @@ export interface UserCreateWithoutFollowersInput {
   id?: Maybe<ID_Input>;
   username?: Maybe<String>;
   email?: Maybe<String>;
+  password?: Maybe<String>;
   firstName?: Maybe<String>;
   lastName?: Maybe<String>;
   bio?: Maybe<String>;
@@ -1961,6 +2001,7 @@ export interface UserCreateWithoutFollowingInput {
   id?: Maybe<ID_Input>;
   username?: Maybe<String>;
   email?: Maybe<String>;
+  password?: Maybe<String>;
   firstName?: Maybe<String>;
   lastName?: Maybe<String>;
   bio?: Maybe<String>;
@@ -2047,6 +2088,7 @@ export interface UserUpsertWithWhereUniqueWithoutFollowersInput {
 export interface UserUpdateWithoutRoomsDataInput {
   username?: Maybe<String>;
   email?: Maybe<String>;
+  password?: Maybe<String>;
   firstName?: Maybe<String>;
   lastName?: Maybe<String>;
   bio?: Maybe<String>;
@@ -2067,6 +2109,7 @@ export interface UserCreateWithoutRoomsInput {
   id?: Maybe<ID_Input>;
   username?: Maybe<String>;
   email?: Maybe<String>;
+  password?: Maybe<String>;
   firstName?: Maybe<String>;
   lastName?: Maybe<String>;
   bio?: Maybe<String>;
@@ -2136,6 +2179,7 @@ export interface UserCreateInput {
   id?: Maybe<ID_Input>;
   username?: Maybe<String>;
   email?: Maybe<String>;
+  password?: Maybe<String>;
   firstName?: Maybe<String>;
   lastName?: Maybe<String>;
   bio?: Maybe<String>;
@@ -2278,6 +2322,7 @@ export interface UserCreateWithoutLikesInput {
   id?: Maybe<ID_Input>;
   username?: Maybe<String>;
   email?: Maybe<String>;
+  password?: Maybe<String>;
   firstName?: Maybe<String>;
   lastName?: Maybe<String>;
   bio?: Maybe<String>;
@@ -2309,6 +2354,7 @@ export interface PostUpdateWithoutFilesDataInput {
 export interface UserUpdateManyMutationInput {
   username?: Maybe<String>;
   email?: Maybe<String>;
+  password?: Maybe<String>;
   firstName?: Maybe<String>;
   lastName?: Maybe<String>;
   bio?: Maybe<String>;
@@ -2364,6 +2410,7 @@ export interface UserCreateWithoutCommentsInput {
   id?: Maybe<ID_Input>;
   username?: Maybe<String>;
   email?: Maybe<String>;
+  password?: Maybe<String>;
   firstName?: Maybe<String>;
   lastName?: Maybe<String>;
   bio?: Maybe<String>;
@@ -2383,6 +2430,7 @@ export interface UserPreviousValues {
   id: ID_Output;
   username?: String;
   email?: String;
+  password?: String;
   firstName?: String;
   lastName?: String;
   bio?: String;
@@ -2397,6 +2445,7 @@ export interface UserPreviousValuesPromise
   id: () => Promise<ID_Output>;
   username: () => Promise<String>;
   email: () => Promise<String>;
+  password: () => Promise<String>;
   firstName: () => Promise<String>;
   lastName: () => Promise<String>;
   bio: () => Promise<String>;
@@ -2411,6 +2460,7 @@ export interface UserPreviousValuesSubscription
   id: () => Promise<AsyncIterator<ID_Output>>;
   username: () => Promise<AsyncIterator<String>>;
   email: () => Promise<AsyncIterator<String>>;
+  password: () => Promise<AsyncIterator<String>>;
   firstName: () => Promise<AsyncIterator<String>>;
   lastName: () => Promise<AsyncIterator<String>>;
   bio: () => Promise<AsyncIterator<String>>;
@@ -3177,6 +3227,7 @@ export interface User {
   id: ID_Output;
   username?: String;
   email?: String;
+  password?: String;
   firstName?: String;
   lastName?: String;
   bio?: String;
@@ -3189,6 +3240,7 @@ export interface UserPromise extends Promise<User>, Fragmentable {
   id: () => Promise<ID_Output>;
   username: () => Promise<String>;
   email: () => Promise<String>;
+  password: () => Promise<String>;
   firstName: () => Promise<String>;
   lastName: () => Promise<String>;
   bio: () => Promise<String>;
@@ -3257,6 +3309,7 @@ export interface UserSubscription
   id: () => Promise<AsyncIterator<ID_Output>>;
   username: () => Promise<AsyncIterator<String>>;
   email: () => Promise<AsyncIterator<String>>;
+  password: () => Promise<AsyncIterator<String>>;
   firstName: () => Promise<AsyncIterator<String>>;
   lastName: () => Promise<AsyncIterator<String>>;
   bio: () => Promise<AsyncIterator<String>>;
@@ -3325,6 +3378,7 @@ export interface UserNullablePromise
   id: () => Promise<ID_Output>;
   username: () => Promise<String>;
   email: () => Promise<String>;
+  password: () => Promise<String>;
   firstName: () => Promise<String>;
   lastName: () => Promise<String>;
   bio: () => Promise<String>;
