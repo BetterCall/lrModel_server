@@ -1593,7 +1593,9 @@ type User {
   firstName: String
   lastName: String
   bio: String
+  fbId: String
   secret: String
+  hasDiscovered: Boolean
   posts(where: PostWhereInput, orderBy: PostOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Post!]
   likes(where: LikeWhereInput, orderBy: LikeOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Like!]
   comments(where: CommentWhereInput, orderBy: CommentOrderByInput, skip: Int, after: String, before: String, first: Int, last: Int): [Comment!]
@@ -1618,7 +1620,9 @@ input UserCreateInput {
   firstName: String
   lastName: String
   bio: String
+  fbId: String
   secret: String
+  hasDiscovered: Boolean
   posts: PostCreateManyWithoutUserInput
   likes: LikeCreateManyWithoutUserInput
   comments: CommentCreateManyWithoutUserInput
@@ -1670,7 +1674,9 @@ input UserCreateWithoutCommentsInput {
   firstName: String
   lastName: String
   bio: String
+  fbId: String
   secret: String
+  hasDiscovered: Boolean
   posts: PostCreateManyWithoutUserInput
   likes: LikeCreateManyWithoutUserInput
   following: UserCreateManyWithoutFollowersInput
@@ -1686,7 +1692,9 @@ input UserCreateWithoutFollowersInput {
   firstName: String
   lastName: String
   bio: String
+  fbId: String
   secret: String
+  hasDiscovered: Boolean
   posts: PostCreateManyWithoutUserInput
   likes: LikeCreateManyWithoutUserInput
   comments: CommentCreateManyWithoutUserInput
@@ -1702,7 +1710,9 @@ input UserCreateWithoutFollowingInput {
   firstName: String
   lastName: String
   bio: String
+  fbId: String
   secret: String
+  hasDiscovered: Boolean
   posts: PostCreateManyWithoutUserInput
   likes: LikeCreateManyWithoutUserInput
   comments: CommentCreateManyWithoutUserInput
@@ -1718,7 +1728,9 @@ input UserCreateWithoutLikesInput {
   firstName: String
   lastName: String
   bio: String
+  fbId: String
   secret: String
+  hasDiscovered: Boolean
   posts: PostCreateManyWithoutUserInput
   comments: CommentCreateManyWithoutUserInput
   following: UserCreateManyWithoutFollowersInput
@@ -1734,7 +1746,9 @@ input UserCreateWithoutPostsInput {
   firstName: String
   lastName: String
   bio: String
+  fbId: String
   secret: String
+  hasDiscovered: Boolean
   likes: LikeCreateManyWithoutUserInput
   comments: CommentCreateManyWithoutUserInput
   following: UserCreateManyWithoutFollowersInput
@@ -1750,7 +1764,9 @@ input UserCreateWithoutRoomsInput {
   firstName: String
   lastName: String
   bio: String
+  fbId: String
   secret: String
+  hasDiscovered: Boolean
   posts: PostCreateManyWithoutUserInput
   likes: LikeCreateManyWithoutUserInput
   comments: CommentCreateManyWithoutUserInput
@@ -1778,8 +1794,12 @@ enum UserOrderByInput {
   lastName_DESC
   bio_ASC
   bio_DESC
+  fbId_ASC
+  fbId_DESC
   secret_ASC
   secret_DESC
+  hasDiscovered_ASC
+  hasDiscovered_DESC
   createdAt_ASC
   createdAt_DESC
   updatedAt_ASC
@@ -1794,7 +1814,9 @@ type UserPreviousValues {
   firstName: String
   lastName: String
   bio: String
+  fbId: String
   secret: String
+  hasDiscovered: Boolean
   createdAt: DateTime!
   updatedAt: DateTime!
 }
@@ -1898,6 +1920,20 @@ input UserScalarWhereInput {
   bio_not_starts_with: String
   bio_ends_with: String
   bio_not_ends_with: String
+  fbId: String
+  fbId_not: String
+  fbId_in: [String!]
+  fbId_not_in: [String!]
+  fbId_lt: String
+  fbId_lte: String
+  fbId_gt: String
+  fbId_gte: String
+  fbId_contains: String
+  fbId_not_contains: String
+  fbId_starts_with: String
+  fbId_not_starts_with: String
+  fbId_ends_with: String
+  fbId_not_ends_with: String
   secret: String
   secret_not: String
   secret_in: [String!]
@@ -1912,6 +1948,8 @@ input UserScalarWhereInput {
   secret_not_starts_with: String
   secret_ends_with: String
   secret_not_ends_with: String
+  hasDiscovered: Boolean
+  hasDiscovered_not: Boolean
   createdAt: DateTime
   createdAt_not: DateTime
   createdAt_in: [DateTime!]
@@ -1958,7 +1996,9 @@ input UserUpdateDataInput {
   firstName: String
   lastName: String
   bio: String
+  fbId: String
   secret: String
+  hasDiscovered: Boolean
   posts: PostUpdateManyWithoutUserInput
   likes: LikeUpdateManyWithoutUserInput
   comments: CommentUpdateManyWithoutUserInput
@@ -1974,7 +2014,9 @@ input UserUpdateInput {
   firstName: String
   lastName: String
   bio: String
+  fbId: String
   secret: String
+  hasDiscovered: Boolean
   posts: PostUpdateManyWithoutUserInput
   likes: LikeUpdateManyWithoutUserInput
   comments: CommentUpdateManyWithoutUserInput
@@ -1990,7 +2032,9 @@ input UserUpdateManyDataInput {
   firstName: String
   lastName: String
   bio: String
+  fbId: String
   secret: String
+  hasDiscovered: Boolean
 }
 
 input UserUpdateManyMutationInput {
@@ -2000,7 +2044,9 @@ input UserUpdateManyMutationInput {
   firstName: String
   lastName: String
   bio: String
+  fbId: String
   secret: String
+  hasDiscovered: Boolean
 }
 
 input UserUpdateManyWithoutFollowersInput {
@@ -2079,7 +2125,9 @@ input UserUpdateWithoutCommentsDataInput {
   firstName: String
   lastName: String
   bio: String
+  fbId: String
   secret: String
+  hasDiscovered: Boolean
   posts: PostUpdateManyWithoutUserInput
   likes: LikeUpdateManyWithoutUserInput
   following: UserUpdateManyWithoutFollowersInput
@@ -2094,7 +2142,9 @@ input UserUpdateWithoutFollowersDataInput {
   firstName: String
   lastName: String
   bio: String
+  fbId: String
   secret: String
+  hasDiscovered: Boolean
   posts: PostUpdateManyWithoutUserInput
   likes: LikeUpdateManyWithoutUserInput
   comments: CommentUpdateManyWithoutUserInput
@@ -2109,7 +2159,9 @@ input UserUpdateWithoutFollowingDataInput {
   firstName: String
   lastName: String
   bio: String
+  fbId: String
   secret: String
+  hasDiscovered: Boolean
   posts: PostUpdateManyWithoutUserInput
   likes: LikeUpdateManyWithoutUserInput
   comments: CommentUpdateManyWithoutUserInput
@@ -2124,7 +2176,9 @@ input UserUpdateWithoutLikesDataInput {
   firstName: String
   lastName: String
   bio: String
+  fbId: String
   secret: String
+  hasDiscovered: Boolean
   posts: PostUpdateManyWithoutUserInput
   comments: CommentUpdateManyWithoutUserInput
   following: UserUpdateManyWithoutFollowersInput
@@ -2139,7 +2193,9 @@ input UserUpdateWithoutPostsDataInput {
   firstName: String
   lastName: String
   bio: String
+  fbId: String
   secret: String
+  hasDiscovered: Boolean
   likes: LikeUpdateManyWithoutUserInput
   comments: CommentUpdateManyWithoutUserInput
   following: UserUpdateManyWithoutFollowersInput
@@ -2154,7 +2210,9 @@ input UserUpdateWithoutRoomsDataInput {
   firstName: String
   lastName: String
   bio: String
+  fbId: String
   secret: String
+  hasDiscovered: Boolean
   posts: PostUpdateManyWithoutUserInput
   likes: LikeUpdateManyWithoutUserInput
   comments: CommentUpdateManyWithoutUserInput
@@ -2314,6 +2372,20 @@ input UserWhereInput {
   bio_not_starts_with: String
   bio_ends_with: String
   bio_not_ends_with: String
+  fbId: String
+  fbId_not: String
+  fbId_in: [String!]
+  fbId_not_in: [String!]
+  fbId_lt: String
+  fbId_lte: String
+  fbId_gt: String
+  fbId_gte: String
+  fbId_contains: String
+  fbId_not_contains: String
+  fbId_starts_with: String
+  fbId_not_starts_with: String
+  fbId_ends_with: String
+  fbId_not_ends_with: String
   secret: String
   secret_not: String
   secret_in: [String!]
@@ -2328,6 +2400,8 @@ input UserWhereInput {
   secret_not_starts_with: String
   secret_ends_with: String
   secret_not_ends_with: String
+  hasDiscovered: Boolean
+  hasDiscovered_not: Boolean
   posts_every: PostWhereInput
   posts_some: PostWhereInput
   posts_none: PostWhereInput
@@ -2371,6 +2445,7 @@ input UserWhereUniqueInput {
   id: ID
   username: String
   email: String
+  fbId: String
 }
 `
       }

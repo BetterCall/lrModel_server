@@ -1,0 +1,8 @@
+type Mutation {
+  facebookLogin(
+    fbId: String!
+    email: String!
+    firstName: String!
+    lastName: String!
+  ): String
+}
