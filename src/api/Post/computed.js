@@ -5,6 +5,7 @@ export default {
     files: parent => prisma.post({ id: parent.id }).files(),
     comments: parent => prisma.post({ id: parent.id }).comments(),
     user: parent => prisma.post({ id: parent.id }).user(),
+
     isLiked: (parent, _, { request }) => {
       const { user } = request;
       const { id: postId } = parent; // postId

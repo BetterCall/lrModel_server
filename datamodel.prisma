@@ -26,11 +26,11 @@ type Post {
 
   location: String
   caption: String
-  files: [File!]!
-
-  likes: [Like!]!
-  comments: [Comment!]!
   user: User!
+
+  files: [File!]! @relation(name: "FilesByUser", onDelete: CASCADE)
+  likes: [Like!]! @relation(name: "LikesByUser", onDelete: CASCADE)
+  comments: [Comment!]! @relation(name: "CommentsByUser", onDelete: CASCADE)
 
   createdAt: DateTime! @createdAt
   updatedAt: DateTime! @updatedAt
@@ -40,7 +40,7 @@ type Like {
   id: ID! @id
 
   user: User!
-  post: Post!
+  post: Post @relation(name: "LikesByUser")
 
   createdAt: DateTime! @createdAt
   updatedAt: DateTime! @updatedAt
@@ -51,7 +51,7 @@ type Comment {
 
   text: String!
   user: User!
-  post: Post!
+  post: Post @relation(name: "CommentsByUser")
 
   createdAt: DateTime! @createdAt
   updatedAt: DateTime! @updatedAt
@@ -61,7 +61,7 @@ type File {
   id: ID! @id
 
   url: String!
-  post: Post!
+  post: Post @relation(name: "FilesByUser")
 
   createdAt: DateTime! @createdAt
   updatedAt: DateTime! @updatedAt
