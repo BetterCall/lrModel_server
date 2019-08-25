@@ -12,8 +12,8 @@ Lr app server with prisma and express
 - [x] Search user by location / firstName / LastName
 - [x] Search Post by location / caption
 
-- [ ] Follow
-- [ ] Unfollow user
+- [x] Follow
+- [x] Unfollow user
 
 - [ ] See User Profile
 - [ ] See the full photo
