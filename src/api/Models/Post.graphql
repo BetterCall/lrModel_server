@@ -9,6 +9,9 @@ type Post {
   comments: [Comment!]!
   user: User!
 
+  isLiked: Boolean
+  likeCount: Int
+
   createdAt: String!
   updatedAt: String!
 }
